@@ -14,7 +14,7 @@ public:
 		health = 0;
 	}
 	~Avengers() {}
-	//캐릭터 설정 함수
+
 	virtual void set(string _name, int _attack, int _defense, int _health)
 	{
 		name = _name;
@@ -22,18 +22,18 @@ public:
 		defense_point = _defense;
 		health = _health;
 	}
-	//공격 함수
+	
 	virtual int attack()
 	{
 		return 0;
 	}
-	//방어 함수
+	
 	virtual void defense(int _attack_point)
 	{
 		int damage = _attack_point - defense_point;
 		health -= damage;
 	}
-	//캐릭터 정보 출력 함수
+	
 	virtual void print_info()
 	{
 		cout << "Name : " << name << endl;
@@ -42,16 +42,16 @@ public:
 		cout << "Health : " << health << endl;
 	}
 protected:
-	string name;//캐릭터 이름
-	int attack_point;//공격력
-	int defense_point;//방어력
-	int health;//체력
+	string name;
+	int attack_point;
+	int defense_point;
+	int health;
 };
 
 class Character : public Avengers
 {
 public:
-	//구현
+	
 	int get_health() { return health; }
 
 	int attack() override 
