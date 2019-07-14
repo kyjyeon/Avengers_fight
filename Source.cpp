@@ -12,6 +12,7 @@ public:
 		attack_point = 0;
 		defense_point = 0;
 		health = 0;
+		dead = 0;
 	}
 	~Avengers() {}
 
